@@ -5,7 +5,6 @@ import NavBar from "../NavBar/NavBar";
 function About() {
   return (
     <>
-      <NavBar />
       <div>
         <h1>ABOUT OUR PRODUCTS</h1>
         <h3>

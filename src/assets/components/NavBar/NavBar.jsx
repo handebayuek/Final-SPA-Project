@@ -20,7 +20,7 @@ function NavBar() {
             <NavLink to="/login">Login</NavLink>
           </li>
           <li>
-            <NavLink to="/shoppingbag">Shopping Bag</NavLink>
+            <NavLink to="/shoppingcart">Shopping Cart</NavLink>
           </li>
         </ul>
       </nav>

@@ -1,54 +1,68 @@
+import { s } from "framer-motion/client";
 import React, { useState } from "react";
-import { Form, Button, Container, Row, Col } from "react-bootstrap";
-import "./Login.css";
+import { useNavigate } from "react-router-dom";
 
-function Login() {
+const Login = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(null);
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (!email || !password) {
-      setError("Please fill out all fields");
-      return;
+  const navigate = useNavigate();
+
+  const onButtonClick = () => {
+    if (email === "") {
+      alert("Email cannot be empty");
+    } else {
+      setEmailError("");
+    }
+    if (password === "") {
+      alert("Password cannot be empty");
+    } else {
+      setEmailError("");
+    }
+
+    if (email && password) {
+      navigate("/ ");
     }
   };
 
   return (
-    <Container>
-      <Row className="justify-content-md-center mt-5">
-        <Col xs={12} md={6}>
-          <h2 className="text-center mb-4">Login</h2>
-          <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control
-                type="email"
-                placeholder="Enter email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </Form.Group>
-
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                type="password"
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </Form.Group>
-
-            <Button variant="primary" type="submit" className="w-100">
-              Login
-            </Button>
-          </Form>
-        </Col>
-      </Row>
-    </Container>
+    <div className={"mainContainer"}>
+      <div className={"titleContainer"}>
+        <div>Login</div>
+      </div>
+      <br />
+      <div className={"inputContainer"}>
+        <input
+          value={email}
+          placeholder="Enter your email here"
+          onChange={(e) => setEmail(e.target.value)}
+          className={"inputBox"}
+        />
+        <label className="errorLabel">{emailError}</label>
+      </div>
+      <br />
+      <div className={"inputContainer"}>
+        <input
+          value={password}
+          placeholder="Enter your password here"
+          onChange={(ev) => setPassword(ev.target.value)}
+          className={"inputBox"}
+        />
+        <label className="errorLabel">{passwordError}</label>
+      </div>
+      <br />
+      <div className={"inputContainer"}>
+        <input
+          className={"inputButton"}
+          type="button"
+          onClick={onButtonClick}
+          value={"Log in"}
+        />
+      </div>
+    </div>
   );
-}
+};
 
 export default Login;
