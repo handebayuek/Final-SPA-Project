@@ -1,0 +1,36 @@
+.header {
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-size: 5em;
+  font-style: normal;
+  color: #a06b58;
+  text-align: center;
+  margin: 20px;
+}
+
+.main-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  width: 80vw;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.body-p {
+  width: 200px;
+}
+
+.body-box {
+  width: 400px;
+  height: 400px;
+  border: 1px solid;
+  background-color: #e0b5a5;
+}
