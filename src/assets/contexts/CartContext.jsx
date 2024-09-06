@@ -2,7 +2,7 @@ import { createContext, useReducer } from "react";
 import reducer from "./reducer";
 import ProductDetails from "../components/Product Details/ProductDetails";
 
-export const CartContext = createContext();
+const CartContext = createContext();
 
 function CartProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, []);
@@ -14,4 +14,4 @@ function CartProvider({ children }) {
   );
 }
 
-export { CartContext as default, CartProvider };
+export { CartContext, CartProvider };
