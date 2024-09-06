@@ -6,7 +6,7 @@ export default function reducer(state, action) {
         return [...state, action.payload];
       case "REMOVE_FROM_CART":
         return state.filter(
-          (_, filteredIndex) => action.payload !== filteredIndex
+          product => product.id !== action.payload
         );
       default:
         return state;

@@ -3,23 +3,24 @@ import { useRemoveFromCart } from "../../hooks/useRemoveFromCart";
 import { useFetch } from "../../hooks/useFetch";
 
 function ShoppingCart() {
-  const { data } = useFetch("./data.json"); // Veriyi ve yükleme durumunu alın
-  const [product, setProducts] = useState([]); // Ürünler için state oluştur
+  const { data } = useFetch("./data.json");
+  const [product, setProducts] = useState([]); // keep the products in the state
   const removeFromCart = useRemoveFromCart();
+  // const clearCart = useClearCart();
 
-  // Veriler geldiğinde state'i güncelle
+  // when the data comes, update the state
   useEffect(() => {
     if (data && data.length > 0) {
-      setProducts(data); // Gelen veriyi state'e ata
+      setProducts(data); // Verileri state'e ata
     }
     console.log("Fetched data:", data);
   }, []);
 
   const handleQuantityChange = (productId, value) => {
-    const numericValue = parseInt(value, 10); // Gelen değeri sayıya çevir
+    const numericValue = parseInt(value, 10); // convert the value to a number
     const updatedCartArr = product.map((item) => {
       if (item.id === productId) {
-        return { ...item, quantity: numericValue }; // Ürünü güncelleyip yeni dizi oluştur
+        return { ...item, quantity: numericValue }; // if the product id matches, update the quantity
       }
       return item;
     });
@@ -27,7 +28,7 @@ function ShoppingCart() {
   };
 
   const totalPrices = product.reduce(
-    (acc, item) => acc + (item.price || 0) * (item.quantity || 0), // Varsayılan değerler ekle
+    (acc, item) => acc + (item.price || 0) * (item.quantity || 0), // add the price of each product to the accumulator
     0
   );
 
@@ -35,7 +36,7 @@ function ShoppingCart() {
     <>
       <div className="shopping-card">
         {product.length === 0 ? (
-          <h2>Shopping Cart is Empty</h2> // Sepet boş ise mesaj gösterilir
+          <h2>Shopping Cart is Empty</h2> // if it is empty
         ) : (
           product.map((product) => (
             <div key={product.id}>
@@ -63,6 +64,7 @@ function ShoppingCart() {
                 <button onClick={() => removeFromCart(product.id)}>
                   <i className="fa-solid fa-trash"></i>
                 </button>
+                {/*  <button onClick={clearCart}>Clear Shoppin Cart</button> */}
               </div>
             </div>
           ))
