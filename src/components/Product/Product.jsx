@@ -1,15 +1,15 @@
-import { useFetch } from "../../hooks/useFetch";
 import { useAddToCart } from "../../hooks/useAddToCart";
-import React from "react";
+import { CartContext } from "../../contexts/CartContext";
+import React, { useContext } from "react";
 
-export default function ProductDetails() {
-  const { data } = useFetch("./data.json");
+export default function Product() {
+  const { state } = useContext(CartContext);
   const addToCart = useAddToCart();
 
   return (
     <>
       <ul className="product-cart">
-        {data.map((product) => (
+        {state.map((product) => (
           <li key={product.id}>
             <div className="description">
               <h2>{product.product_name}</h2>

@@ -1,0 +1,71 @@
+.brand-name {
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-size: 5em;
+  font-style: normal;
+  color: #a06b58;
+  text-align: center;
+  margin-top: 1.5em;
+}
+
+.homepage-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5em;
+}
+
+.homepage-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.homepage-body-p {
+  width: 400px;
+  margin: 20px;
+}
+
+.homepage-body-p p {
+  color: #a06b58;
+  font-weight: bolder;
+  font-size: 32px;
+  width: 20vw;
+}
+
+.homepage-img {
+  width: 400px;
+}
+
+.homepage-box {
+  width: 600px;
+  height: 600px;
+  border: 1px solid #e0b5a5;
+  background-color: #e0b5a5;
+  transform: translateX(-100px);
+}
+
+.homepage-box h1 {
+  font-size: 12em;
+  color: #7c4d3c;
+  margin-left: 10px;
+  text-align: left;
+}
+
+.homepage-box h2 {
+  font-size: 4em;
+  margin-left: 10px;
+}
+
+.span-1 {
+  color: #a08f77;
+}
+
+.span-2 {
+  color: #f1daba;
+}
+
+.span-3 {
+  color: #f6f0eb;
+}

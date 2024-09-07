@@ -1,0 +1,23 @@
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #e0b5a5;
+  height: 50vh;
+  text-align: center;
+
+  position: sticky;
+}
+
+.footer-icon a {
+  margin-left: 15px;
+  color: #a06b58;
+}
+
+.footer-p {
+  color: #f6f0eb;
+}
+
+.footer-img img {
+  width: 600px;
+}
