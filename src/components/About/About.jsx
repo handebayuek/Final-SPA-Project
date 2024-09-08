@@ -18,7 +18,7 @@ function About() {
           </h3>
         </div>
         <div className="right-side">
-          <div className="about-container">
+          <div className="about-container1">
             <div>
               <h4 className="about-container-h4">safe and gentle</h4>
             </div>
@@ -31,7 +31,7 @@ function About() {
               </p>
             </div>
           </div>
-          <div className="about-container">
+          <div className="about-container2">
             <div>
               <h4 className="about-container-h4">
                 eco-<span>friendly</span>
@@ -46,7 +46,7 @@ function About() {
               </p>
             </div>
           </div>
-          <div className="about-container">
+          <div className="about-container3">
             <div>
               <h4 className="about-container-h4">
                 nutrient-<span>rich</span>
@@ -60,7 +60,7 @@ function About() {
               </p>
             </div>
           </div>
-          <div className="about-container">
+          <div className="about-container4">
             <div>
               <h4 className="about-container-h4">
                 ethical and <span>cruelty-free</span>

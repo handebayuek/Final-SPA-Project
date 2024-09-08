@@ -21,6 +21,9 @@ function NavBar() {
             <NavLink to="/about">About Our Products</NavLink>
           </li>
           <li>
+            <NavLink to="/guidepage">Skin Care Guide</NavLink>
+          </li>
+          <li>
             <NavLink to="/product">Product</NavLink>
           </li>
           <li>

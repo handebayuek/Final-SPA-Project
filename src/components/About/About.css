@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  padding: 60px;
+  padding-top: 100px;
 }
 
 .left-side {
@@ -39,12 +39,20 @@
   margin-right: 30px;
 }
 
-.about-container {
+.about-container1,
+.about-container2,
+.about-container3,
+.about-container4 {
   display: grid;
   grid-template-columns: 2fr 3fr;
   align-items: center;
-  border-bottom: 1px solid #d1ccc0;
   padding-bottom: 15px;
+}
+
+.about-container1,
+.about-container2,
+.about-container3 {
+  border-bottom: 1px solid #d1ccc0;
 }
 
 .about-container-h4 {

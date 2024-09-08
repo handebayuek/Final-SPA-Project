@@ -1,6 +1,6 @@
-import { s } from "framer-motion/client";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Login.css";
 
 const Login = (props) => {
   const [email, setEmail] = useState("");
@@ -12,54 +12,70 @@ const Login = (props) => {
 
   const onButtonClick = () => {
     if (email === "") {
-      alert("Email cannot be empty");
+      setEmailError("Email cannot be empty");
     } else {
       setEmailError("");
     }
     if (password === "") {
-      alert("Password cannot be empty");
+      setPasswordError("Password cannot be empty");
     } else {
-      setEmailError("");
+      setPasswordError("");
     }
 
     if (email && password) {
-      navigate("/ ");
+      navigate("/");
     }
+  };
+
+  const onRegisterClick = () => {
+    navigate("/registration");
   };
 
   return (
     <div className={"mainContainer"}>
-      <div className={"titleContainer"}>
-        <div>Login</div>
-      </div>
-      <br />
-      <div className={"inputContainer"}>
-        <input
-          value={email}
-          placeholder="Enter your email here"
-          onChange={(e) => setEmail(e.target.value)}
-          className={"inputBox"}
-        />
-        <label className="errorLabel">{emailError}</label>
-      </div>
-      <br />
-      <div className={"inputContainer"}>
-        <input
-          value={password}
-          placeholder="Enter your password here"
-          onChange={(ev) => setPassword(ev.target.value)}
-          className={"inputBox"}
-        />
-        <label className="errorLabel">{passwordError}</label>
-      </div>
-      <br />
-      <div className={"inputContainer"}>
-        <input
-          className={"inputButton"}
-          type="button"
-          onClick={onButtonClick}
-          value={"Log in"}
-        />
+      <div className={"login-form"}>
+        <div className={"titleContainer"}>
+          <h1>Login</h1>
+        </div>
+        <div className={"inputContainer"}>
+          <label>Email</label>
+          <input
+            value={email}
+            placeholder="Enter your email here..."
+            onChange={(e) => setEmail(e.target.value)}
+            className={"inputBox"}
+          />
+          {emailError && <span>{emailError}</span>}
+        </div>
+        <div className={"inputContainer"}>
+          <label>Password</label>
+          <input
+            value={password}
+            placeholder="Enter your password here..."
+            onChange={(ev) => setPassword(ev.target.value)}
+            className={"inputBox"}
+          />
+          {passwordError && <span>{passwordError}</span>}
+        </div>
+        <div className={"inputButtonDiv"}>
+          <div className="login-btn">
+            <input
+              className={"inputButton"}
+              type="button"
+              onClick={onButtonClick}
+              value={"Log in"}
+            />
+          </div>
+          <p>or</p>
+          <div className="login-btn">
+            <input
+              className={"inputButton"}
+              type="button"
+              onClick={onRegisterClick}
+              value={"Register"}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

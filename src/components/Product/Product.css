@@ -1,0 +1,81 @@
+.product-cart {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px;
+  margin: 15px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  text-align: left;
+  padding: 20px;
+}
+
+.product-container {
+  display: flex;
+  flex-basis: 50%;
+  border: 1px solid #ddd;
+}
+
+.description h2 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #a06b58;
+  padding-bottom: 20px;
+}
+
+.description h6 {
+  font-size: 0.9em;
+  color: #a08f77;
+}
+
+.description p {
+  font-size: 1em;
+  color: #a28162;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 10px;
+  background: none;
+  border: 1px solid #a06b58;
+  font-size: 15px;
+  color: #f6f0eb;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  border-radius: 12px;
+  background-color: #e0b5a5;
+  font-weight: bolder;
+  box-shadow: 0 1px 0 1px #a08f77;
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 120%;
+  background-color: white;
+  top: 50%;
+  transform: skewX(30deg) translate(-150%, -50%);
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  background-color: #e0b5a5;
+  color: #fff;
+  box-shadow: 0 2px 0 2px #a06b58;
+}
+
+.btn:hover::before {
+  transform: skewX(30deg) translate(150%, -50%);
+  transition-delay: 0.1s;
+}
+
+.btn:active {
+  transform: scale(0.9);
+}
