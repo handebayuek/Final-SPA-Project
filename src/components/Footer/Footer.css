@@ -19,3 +19,27 @@ footer {
 .footer-img img {
   width: 600px;
 }
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    padding: 10px; 
+  }
+
+  .footer-img img {
+    width: 80%; 
+    margin-bottom: 20px; 
+  }
+
+  .footer-icon {
+    margin-top: 10px; 
+  }
+
+  .footer-p {
+    font-size: 14px; /
+  }
+
+  .footer-icon a {
+    font-size: 20px; 
+  }
+}

@@ -72,3 +72,84 @@ h3 {
 .register-btn:hover {
   background-color: #a06b58;
 }
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .register-form {
+    width: 90%;
+    background-size: cover;
+    padding: 20px;
+  }
+
+  .register-header {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  .register-box {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .register-btn {
+    width: 120px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .register-form {
+    width: 100%;
+    padding: 15px;
+    margin-top: 50px;
+  }
+
+  .register-header {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  .register-box {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .register-btn {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-form {
+    width: 100%;
+    padding: 10px;
+    margin-top: 30px;
+  }
+
+  .register-header {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  .register-box {
+    width: 100%;
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .register-btn {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+  }
+}

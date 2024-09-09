@@ -2,21 +2,21 @@ import React, { useContext } from "react";
 import { useRemoveFromCart } from "../../hooks/useRemoveFromCart";
 import { CartContext } from "../../contexts/CartContext";
 import "./ShoppingCart.css";
+import { useClearCart } from "../../hooks/useClearCart";
 
 function ShoppingCart() {
-  const { state } = useContext(CartContext);
+  const { state, dispatch } = useContext(CartContext);
   console.log("state:", state);
   const removeFromCart = useRemoveFromCart();
+  const clearCart = useClearCart();
 
   const handleQuantityChange = (productId, value) => {
     const numericValue = parseInt(value, 10); // değeri sayıya çevir
-    const updatedCartArr = state.map((item) => {
-      if (item.id === productId) {
-        return { ...item, quantity: numericValue }; // ürün id eşleşirse, miktarı güncelle
-      }
-      return item;
+
+    dispatch({
+      type: "UPDATE_QUANTITY",
+      payload: { id: productId, quantity: numericValue },
     });
-    // Burada setProducts fonksiyonu eksik, güncelleme işlemi yapılmalı
   };
 
   const totalPrices = state.reduce(
@@ -43,7 +43,7 @@ function ShoppingCart() {
               value={state.quantity || 0}
               onChange={(e) => handleQuantityChange(state.id, e.target.value)}
             />
-            <button onClick={() => removeFromCart(state.id)}>
+            <button onClick={() => removeFromCart(state)}>
               <i className="fa-solid fa-trash"></i>
             </button>
             {/* <p>{(state.price || 0).toFixed(2)}</p> */}
@@ -69,6 +69,9 @@ function ShoppingCart() {
                 <h4>
                   Total Price: <span>{totalPrices}€</span>
                 </h4>
+                <button className="clear-btn" onClick={clearCart}>
+                  Clear Bag
+                </button>
               </div>
             </>
           )}
@@ -78,7 +81,7 @@ function ShoppingCart() {
           <>
             <div className="payment-step">
               <p>Proceed to payment step</p>
-              <i class="fa-solid fa-circle-arrow-right fa-2xl"></i>
+              <i className="fa-solid fa-circle-arrow-right fa-2xl"></i>
             </div>
           </>
         )}

@@ -54,3 +54,50 @@
   grid-area: 2 / 3 / 3 / 4;
   padding: 20px;
 }
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .guide-section {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+
+  .guide-page-title {
+    grid-area: 1 / 1 / 2 / 3;
+    font-size: 3em;
+  }
+
+  .guide-column1,
+  .guide-column2,
+  .guide-column3 {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .guide-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .guide-page-title {
+    grid-area: 1 / 1 / 2 / 2;
+    font-size: 2.5em;
+  }
+
+  .guide-column1,
+  .guide-column2,
+  .guide-column3 {
+    padding: 15px;
+    border: none;
+  }
+
+  .guide-section h2 {
+    font-size: 20px;
+  }
+
+  .guide-section p {
+    font-size: 14px;
+  }
+}

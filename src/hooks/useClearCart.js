@@ -1,6 +1,6 @@
 import {useContext} from 'react';
-import {CartContext} from '../context/CartContext';
-import {clearCart} from '../context/CartActions';
+import {CartContext} from '../contexts/CartContext';
+import {clearCart} from '../contexts/actions';
 
 
 export function useClearCart(){

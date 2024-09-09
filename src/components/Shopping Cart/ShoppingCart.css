@@ -66,6 +66,8 @@ button i {
 }
 
 .total-price {
+  display: flex;
+  justify-content: space-between;
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -73,6 +75,23 @@ button i {
   width: 500px;
   padding: 10px;
   color: #a08f77;
+}
+
+.clear-btn {
+  padding: 10px;
+  background-color: #e0b5a5;
+  color: white;
+  font-size: 16px;
+  border: 1px solid #a08f77;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  border-radius: 10px;
+  color: #de4f4f;
+  background: #e0b5a5;
+  box-shadow: inset -20px -20px 29px #d5ac9d, inset 20px 20px 29px #ebbead;
 }
 
 .payment-step {
@@ -94,4 +113,121 @@ button i {
 
 .payment-step i {
   color: #a06b58;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .shopping-card h1 {
+    font-size: 30px;
+    padding: 10px;
+  }
+
+  .shopping-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .shopping-image {
+    max-width: 120px;
+  }
+
+  .shopping-details h2 {
+    font-size: 20px;
+  }
+
+  .shopping-details input {
+    width: 30px;
+  }
+
+  .total-price {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .shopping-card h1 {
+    font-size: 24px;
+    padding: 8px;
+  }
+
+  .shopping-container {
+    padding: 5px 0;
+  }
+
+  .shopping-image {
+    max-width: 100px;
+    margin-right: 5px;
+  }
+
+  .shopping-details h2 {
+    font-size: 18px;
+  }
+
+  .shopping-details p {
+    font-size: 14px;
+  }
+
+  .shopping-details input {
+    width: 25px;
+  }
+
+  .total-price {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .clear-btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .payment-step p {
+    font-size: 20px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shopping-card h1 {
+    font-size: 20px;
+    padding: 6px;
+  }
+
+  .shopping-container {
+    padding: 5px 0;
+    width: 100%;
+  }
+
+  .shopping-image {
+    max-width: 80px;
+    margin-right: 0;
+  }
+
+  .shopping-details h2 {
+    font-size: 16px;
+  }
+
+  .shopping-details p {
+    font-size: 12px;
+  }
+
+  .shopping-details input {
+    width: 20px;
+  }
+
+  .total-price {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .clear-btn {
+    width: 100%;
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .payment-step p {
+    font-size: 18px;
+  }
 }

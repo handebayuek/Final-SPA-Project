@@ -102,3 +102,84 @@ label {
   padding: 5px;
   border-radius: 5px;
 }
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .login-form {
+    width: 90%;
+    background-size: cover;
+    height: auto;
+  }
+
+  .inputBox {
+    width: 80%;
+  }
+
+  .titleContainer {
+    font-size: 30px;
+  }
+
+  .inputButton {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-form {
+    width: 95%;
+    margin-top: 50px;
+    padding: 20px;
+    height: auto;
+    background-size: cover;
+  }
+
+  .titleContainer {
+    font-size: 24px;
+    margin: 10px;
+  }
+
+  .inputBox {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .inputButton {
+    width: 90%;
+    padding: 8px;
+  }
+
+  .inputButtonDiv {
+    width: 90%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-form {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+  }
+
+  .titleContainer {
+    font-size: 20px;
+  }
+
+  .inputBox {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .inputButton {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .inputButtonDiv {
+    width: 100%;
+  }
+
+  label {
+    font-size: 14px;
+  }
+}

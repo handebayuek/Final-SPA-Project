@@ -71,3 +71,68 @@
   padding-left: 20px;
   margin: 30px;
 }
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .about-page {
+    grid-template-columns: 1fr;
+    padding-top: 50px;
+  }
+
+  .left-side {
+    margin-left: 20px;
+  }
+
+  .right-side {
+    margin-right: 20px;
+  }
+
+  .about-header {
+    font-size: 3.5em;
+  }
+
+  .about-explain {
+    font-size: 1.2em;
+  }
+
+  .about-container-h4 {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    padding-top: 30px;
+  }
+
+  .about-header {
+    font-size: 2.8em;
+  }
+
+  .about-explain {
+    font-size: 1.1em;
+  }
+
+  .about-container-h4 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-header {
+    font-size: 2em;
+  }
+
+  .about-explain {
+    font-size: 1em;
+  }
+
+  .about-container-h4 {
+    font-size: 1.5em;
+  }
+
+  .about-container p {
+    font-size: 14px;
+    margin: 20px;
+  }
+}

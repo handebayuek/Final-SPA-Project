@@ -10,6 +10,8 @@ export function useRemoveFromCart() {
         dispatch(removeFromCart(product));
     };
 
-}
+} 
+
+
 
 
