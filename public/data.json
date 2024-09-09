@@ -7,7 +7,9 @@
         "id": 1,
         "brand": "BotaniPure",
         "description":"Our washing gel is a gentle, daily cleanser that effectively removes impurities, excess oil, and makeup without stripping your skin's natural moisture. It leaves your skin feeling clean, refreshed, and balanced, making it ideal for all skin types, including sensitive skin.",
-        "image":"/image/cleanser.jpg"
+        "image":"/image/cleanser.jpg",
+        "isBestseller": true,
+        "rating":5
        
         
       },
@@ -49,7 +51,9 @@
         "id": 5,
         "brand": "BotaniPure",
         "description":"This eye cream is specially formulated to reduce the appearance of dark circles, puffiness, and fine lines around the delicate eye area. Its lightweight, fast-absorbing formula provides intense hydration and revitalization, leaving your eyes looking brighter and more rested.",
-        "image":"/image/eyecream.jpg"
+        "image":"/image/eyecream.jpg",
+        "isBestseller": true,
+        "rating":4
     },
 
       {

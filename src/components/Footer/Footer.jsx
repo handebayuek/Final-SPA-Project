@@ -10,38 +10,77 @@ const allnewpath = "../../image/allnew.png";
 function Footer() {
   return (
     <footer>
-      <div>
-        <p className="footer-p">&copy; 2021 Company. All rights reserved.</p>
-      </div>
-      <div className="footer-icon">
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-          <FaTwitter size={24} color="#1DA1F2" />
-        </a>
-        <a
-          href="https://instagram.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaInstagram size={24} color=" #e95950 " />
-        </a>
-        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
-          <FaTiktok size={24} color="#EE1D51" />
-        </a>
-        <a href="https://linkedin" target="_blank" rel="noopener noreferrer">
-          <FaLinkedin size={24} color="#0A66C2" />
-        </a>
-      </div>
+      <div className="footer">
+        <div className="copy-part">
+          <p className="footer-p">&copy; 2021 Company. All rights reserved.</p>
+        </div>
+        <div className="about-us">
+          <h5>About Us</h5>
+          <ul>
+            <li href="">BotaniPure Mission</li>
+            <li href="">Careers</li>
+          </ul>
+        </div>
+        <div className="footer-icon">
+          <h5>Follow Us</h5>
+          <ul>
+            <li
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTwitter size={24} color="#1DA1F2" />
+            </li>
+            <li
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram size={24} color=" #e95950 " />
+            </li>
+            <li
+              href="https://tiktok.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTiktok size={24} color="#EE1D51" />
+            </li>
+            <li
+              href="https://linkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin size={24} color="#0A66C2" />
+            </li>
+          </ul>
+        </div>
 
-      <div className="footer-phone">
-        <p className="footer-p">📞 +1-234-567-890</p>
-        <p className="footer-p">✉️ info@company.com</p>
-      </div>
+        <div className="footer-phone">
+          <h5>Contact Us</h5>
+          <p className="footer-p">📞 +1-234-567-890</p>
+          <p className="footer-p">✉️ info@company.com</p>
+        </div>
+        <div className="customer-service">
+          <h5>Customer Service</h5>
+          <ul>
+            <li href="">FAQ</li>
+            <li href="">Shipping & Returns</li>
+            <li href="">Contact Us</li>
+          </ul>
+        </div>
 
-      <div className="footer-img">
-        {/*  <img src={veganPath} alt="vegan" />
-        <img src={crueltyFreePath} alt="crueltyfree" />
-        <img src={allskintypePath} alt="allskintype" /> */}
-        <img src={allnewpath} alt="all-logo" />
+        <div className="your-account">
+          <h5>Your Account</h5>
+          <ul>
+            <li href="">My Account</li>
+            <li href="">Order History</li>
+            <li href="">Wishlist</li>
+          </ul>
+        </div>
+
+        <div className="footer-img">
+          <img src={allnewpath} alt="all-logo" />
+        </div>
       </div>
     </footer>
   );

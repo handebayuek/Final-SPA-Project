@@ -3,6 +3,8 @@
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   padding-top: 100px;
+  margin-bottom: 63px;
+  padding-left: 10px;
 }
 
 .left-side {
@@ -18,6 +20,7 @@
   font-weight: bold;
   color: #a06b58;
   line-height: 1.2;
+  text-decoration: underline;
 }
 
 .about-header span {

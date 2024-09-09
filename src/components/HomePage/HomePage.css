@@ -1,61 +1,66 @@
 .brand-name {
   font-family: "Special Elite", system-ui;
   font-weight: 400;
-  font-size: 5em;
-  font-style: normal;
+  font-size: 7em;
   color: #a06b58;
+  padding-top: 90px;
+  margin-left: 20px;
   text-align: center;
-  margin-top: 1.5em;
-}
-
-.homepage-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1.5em;
+  /* position: absolute; */
+  z-index: 9999;
 }
 
 .homepage-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
 }
 
-.homepage-body-p {
-  width: 400px;
-  margin: 20px;
+.img-container {
+  display: flex;
 }
 
-.homepage-body-p p {
-  color: #a06b58;
-  font-weight: bolder;
-  font-size: 32px;
-  width: 20vw;
+.img-item {
+  margin: 10px;
+  width: 300px;
 }
 
-.homepage-img {
-  width: 400px;
+.homepage-body-bottom {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 7em;
+}
+
+.slogan-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .homepage-box {
-  width: 600px;
-  height: 600px;
-  border: 1px solid #e0b5a5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
   background-color: #e0b5a5;
-  transform: translateX(-100px);
+  text-align: center;
+  line-height: 3.5em;
+  opacity: 0.8;
 }
 
 .homepage-box h1 {
-  font-size: 12em;
+  font-size: 3.5em;
   color: #7c4d3c;
-  margin-left: 10px;
   text-align: left;
 }
 
 .homepage-box h2 {
-  font-size: 4em;
-  margin-left: 10px;
+  font-size: 2em;
 }
 
 .span-1 {
@@ -70,15 +75,60 @@
   color: #f6f0eb;
 }
 
+.homepage-body-p p {
+  color: #a06b58;
+  font-weight: bolder;
+  font-size: 32px;
+  width: 30vw;
+  text-align: left;
+  margin-left: 30px;
+}
+
+.bestsellers-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 5px;
+  border: 1px solid;
+}
+
+.bestseller-item {
+  position: relative;
+  width: 200px;
+  text-align: center;
+}
+
+.bestseller-label {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(50%);
+  background-color: #da4848;
+  color: #ffff;
+  padding: 4px;
+  font-size: 10px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.bestseller-item img {
+  width: 100%;
+  height: auto;
+}
+
+.bestseller-item h3 {
+  font-size: 16px;
+  color: #7c4d3c;
+}
+
+.rating {
+  color: #7c4d3c;
+}
+
+.rating span {
+  color: gold;
+  font-size: 14px;
+}
+
 /* Responsive Styles */
-@media screen and (min-width: 769px) {
-  /* STYLES HERE */
-}
-
-@media screen and (min-device-width: 481px) and (max-device-width: 768px) {
-  /* STYLES HERE */
-}
-
-@media only screen and (max-device-width: 480px) {
-  /* STYLES HERE */
-}

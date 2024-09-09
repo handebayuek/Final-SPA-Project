@@ -60,11 +60,25 @@ function ShoppingCart() {
       <div className="shopping-card">
         <div>
           {productList.length === 0 ? (
-            <h1 className="empty-h1">Shopping Cart is Empty</h1>
+            <div className="empty-card-page">
+              <div className="empty-p">
+                <p>
+                  Please add a product to your shopping bag in order to
+                  checkout.
+                </p>
+              </div>
+              <div className="img-container">
+                {state.map((product) => (
+                  <div className="img-item-shopping" key={product.id}>
+                    <img src={product.image} alt={product.product_name} />
+                  </div>
+                ))}
+              </div>
+            </div>
           ) : (
             <>
               <h1>Your Bag</h1>
-              {productList}
+              <div className="product-list">{productList}</div>
               <div className="total-price">
                 <h4>
                   Total Price: <span>{totalPrices}€</span>
